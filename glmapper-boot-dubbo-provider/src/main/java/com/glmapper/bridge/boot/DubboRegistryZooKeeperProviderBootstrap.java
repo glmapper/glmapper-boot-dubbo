@@ -17,7 +17,9 @@
 package com.glmapper.bridge.boot;
 
 import com.glmapper.bridge.boot.service.HelloService;
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
 import org.springframework.context.ApplicationListener;
@@ -28,14 +30,15 @@ import org.springframework.context.ApplicationListener;
  * @see HelloService
  * @since 2.7.0
  */
-@EnableAutoConfiguration
+@SpringBootApplication
 public class DubboRegistryZooKeeperProviderBootstrap {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(DubboRegistryZooKeeperProviderBootstrap.class)
-                .listeners((ApplicationListener<ApplicationEnvironmentPreparedEvent>) event -> {
-                    new EmbeddedZooKeeper(2181, false).start();
-                })
-                .run(args);
+        SpringApplication.run(DubboRegistryZooKeeperProviderBootstrap.class,args);
+//        new SpringApplicationBuilder(DubboRegistryZooKeeperProviderBootstrap.class)
+//                .listeners((ApplicationListener<ApplicationEnvironmentPreparedEvent>) event -> {
+//                    new EmbeddedZooKeeper(2181, false).start();
+//                })
+//                .run(args);
     }
 }

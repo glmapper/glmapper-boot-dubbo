@@ -7,6 +7,8 @@
         <module>glmapper-boot-dubbo-provider</module>
         <module>glmapper-boot-dubbo-consumer</module>
         <module>glmapper-boot-dubbo-facade</module>
+        <module>dubbo-2.6.x-consumer</module>
+        <module>dubbo-2.6.x-provider</module>
     </modules>
     <parent>
         <groupId>com.alipay.sofa</groupId>
