@@ -24,7 +24,7 @@
         <dependency>
             <groupId>io.zipkin.brave</groupId>
             <artifactId>brave-instrumentation-dubbo-rpc</artifactId>
-            <version>5.6.11</version>
+            <version>5.6.12-SNAPSHOT</version>
         </dependency>
 
         <dependency>

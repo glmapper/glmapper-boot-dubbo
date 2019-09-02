@@ -24,12 +24,9 @@ limitations under the License.
     <!-- consumer's application name, used for tracing dependency relationship (not a matching criterion),
     don't set it same as provider -->
     <dubbo:application name="demo-consumer"/>
-
     <!-- use multicast registry center to discover service -->
-    <dubbo:registry address="zookeeper://sofa.cloud.alipay.net:2181"/>
-
+    <dubbo:registry address="multicast://224.5.6.7:1234?unicast=false" />
     <!-- generate proxy for the remote service, then demoService can be used in the same way as the
     local regular interface -->
-    <dubbo:reference id="demoService" check="false" interface="com.glmapper.bridge.boot.service.HelloService" async="true"/>
-    <dubbo:consumer filter="tracing" />
+    <dubbo:reference id="demoService" check="false" interface="com.glmapper.bridge.boot.service.HelloService" async="true" filter="tracing"/>
 </beans>
