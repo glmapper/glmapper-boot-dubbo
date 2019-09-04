@@ -21,36 +21,36 @@
             <artifactId>glmapper-boot-dubbo-facade</artifactId>
         </dependency>
 
+        <!--<dependency>-->
+            <!--<groupId>io.zipkin.brave</groupId>-->
+            <!--<artifactId>brave-instrumentation-dubbo-rpc</artifactId>-->
+            <!--<version>5.6.12-SNAPSHOT</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>io.zipkin.brave</groupId>-->
+            <!--<artifactId>brave</artifactId>-->
+            <!--<version>5.6.11</version>-->
+        <!--</dependency>-->
+
+
         <dependency>
-            <groupId>io.zipkin.brave</groupId>
-            <artifactId>brave-instrumentation-dubbo-rpc</artifactId>
-            <version>5.6.12-SNAPSHOT</version>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>
+            <version>2.4.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
-            <groupId>io.zipkin.brave</groupId>
-            <artifactId>brave</artifactId>
-            <version>5.6.11</version>
+            <groupId>io.opentracing</groupId>
+            <artifactId>opentracing-api</artifactId>
+            <version>0.22.0</version>
         </dependency>
 
-
-        <!--<dependency>-->
-            <!--<groupId>com.alipay.sofa</groupId>-->
-            <!--<artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>-->
-            <!--<version>2.4.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>io.opentracing</groupId>-->
-            <!--<artifactId>opentracing-api</artifactId>-->
-            <!--<version>0.22.0</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>com.alipay.sofa</groupId>-->
-            <!--<artifactId>tracer-core</artifactId>-->
-            <!--<version>2.4.1-SNAPSHOT</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>tracer-core</artifactId>
+            <version>2.4.1-SNAPSHOT</version>
+        </dependency>
 
         <dependency>
             <groupId>com.101tec</groupId>

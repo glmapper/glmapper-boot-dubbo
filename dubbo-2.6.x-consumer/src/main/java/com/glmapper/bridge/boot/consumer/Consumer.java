@@ -34,10 +34,11 @@ public class Consumer {
 
         while (true) {
             try {
-                Thread.sleep(5000);
                 demoService.SayHello("world"); // call remote method
                 Future<String> fooFuture = RpcContext.getContext().getFuture();
                 System.out.println(fooFuture.get()); // get result
+                Thread.sleep(6000*10+1000);
+                break;
             } catch (Throwable throwable) {
                 throwable.printStackTrace();
             }

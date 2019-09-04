@@ -18,11 +18,7 @@ package com.glmapper.bridge.boot;
 
 import com.glmapper.bridge.boot.service.HelloService;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.context.event.ApplicationEnvironmentPreparedEvent;
-import org.springframework.context.ApplicationListener;
 
 /**
  * Dubbo Registry ZooKeeper Provider Bootstrap

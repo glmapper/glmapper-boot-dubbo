@@ -30,6 +30,6 @@ limitations under the License.
     <bean id="demoService" class="com.glmapper.bridge.boot.provider.HelloServiceImpl"/>
 
     <!-- declare the service interface to be exported -->
-    <dubbo:service interface="com.glmapper.bridge.boot.service.HelloService" ref="demoService" filter="tracing"/>
+    <dubbo:service interface="com.glmapper.bridge.boot.service.HelloService" ref="demoService" filter="dubboSofaTracerFilter"/>
 
 </beans>
