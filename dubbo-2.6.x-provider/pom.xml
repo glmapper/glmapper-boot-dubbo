@@ -33,7 +33,6 @@
             <!--<version>5.6.11</version>-->
         <!--</dependency>-->
 
-
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>

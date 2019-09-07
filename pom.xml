@@ -4,16 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>glmapper-boot-dubbo-provider</module>
-        <module>glmapper-boot-dubbo-consumer</module>
         <module>glmapper-boot-dubbo-facade</module>
         <module>dubbo-2.6.x-consumer</module>
         <module>dubbo-2.6.x-provider</module>
     </modules>
     <parent>
-        <groupId>com.alipay.sofa</groupId>
-        <artifactId>sofaboot-dependencies</artifactId>
-        <version>2.5.2</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
     </parent>
     <groupId>com.glmapper.bridge.boot</groupId>
     <artifactId>glmapper-boot-dubbo</artifactId>
