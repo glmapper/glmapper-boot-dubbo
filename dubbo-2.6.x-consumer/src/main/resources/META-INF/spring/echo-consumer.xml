@@ -33,6 +33,5 @@
     <dubbo:consumer filter="dubboSofaTracerFilter"/>
 
     <!-- 指定要消费的服务 -->
-    <dubbo:reference id="echoService" check="false" interface="com.alibaba.dubbo.samples.echo.api.EchoService" url="dubbo://127.0.0.1:20880"/>
-
+    <dubbo:reference id="echoService" check="false" interface="com.glmapper.bridge.boot.service.HelloService" url="dubbo://127.0.0.1:20880"/>
 </beans>

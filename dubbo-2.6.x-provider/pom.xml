@@ -21,34 +21,44 @@
             <artifactId>glmapper-boot-dubbo-facade</artifactId>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>io.zipkin.brave</groupId>-->
-            <!--<artifactId>brave-instrumentation-dubbo-rpc</artifactId>-->
-            <!--<version>5.6.12-SNAPSHOT</version>-->
-        <!--</dependency>-->
-
-        <!--<dependency>-->
-            <!--<groupId>io.zipkin.brave</groupId>-->
-            <!--<artifactId>brave</artifactId>-->
-            <!--<version>5.6.11</version>-->
-        <!--</dependency>-->
-
+        <!--1、如果是单独只需要 dubbo 埋点，则可以仅引入 dubbo 插件依赖，下面是  2.6.x 版本插件-->
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>
-            <version>2.4.1-SNAPSHOT</version>
+            <version>3.0.6</version>
         </dependency>
+
+        <!--下面是  2.7.x 版本插件，默认引入  tracer-sofa-boot-starter 时使用的是 2.7.x 版本的插件-->
+        <!--<dependency>-->
+            <!--<groupId>com.alipay.sofa</groupId>-->
+            <!--<artifactId>sofa-tracer-dubbo-plugin</artifactId>-->
+            <!--<version>3.0.6</version>-->
+        <!--</dependency>-->
+
+
+        <!--2、starter 方式，可以兼顾其他组件-->
+        <!--<dependency>-->
+            <!--<groupId>com.alipay.sofa</groupId>-->
+            <!--<artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>-->
+            <!--<version>3.0.6</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+            <!--<groupId>com.alipay.sofa</groupId>-->
+            <!--<artifactId>tracer-sofa-boot-starter</artifactId>-->
+            <!--<version>3.0.6</version>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>com.alipay.sofa</groupId>-->
+                    <!--<artifactId>sofa-tracer-dubbo-plugin</artifactId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>io.opentracing</groupId>
             <artifactId>opentracing-api</artifactId>
             <version>0.22.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>tracer-core</artifactId>
-            <version>2.4.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
@@ -100,6 +110,12 @@
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.0.35.Final</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alipay.sofa.common</groupId>
+            <artifactId>log-sofa-boot-starter</artifactId>
+            <version>1.0.17</version>
         </dependency>
     </dependencies>
 </project>

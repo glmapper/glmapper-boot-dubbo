@@ -16,34 +16,40 @@
  */
 package com.glmapper.bridge.boot.consumer;
 
-import com.alibaba.dubbo.rpc.RpcContext;
 import com.glmapper.bridge.boot.service.HelloService;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.BeansException;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.annotation.ImportResource;
 
-import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
 
-public class Consumer {
+@SpringBootApplication
+@ImportResource("classpath:META-INF/spring/echo-consumer.xml")
+public class Consumer implements ApplicationContextAware {
+    private static final Logger LOGGER = LoggerFactory.getLogger(Consumer.class);
 
     public static void main(String[] args) {
-        //Prevent to get IPV6 address,this way only work in debug mode
-        //But you can pass use -Djava.net.preferIPv4Stack=true,then it work well whether in debug mode or not
-        System.setProperty("java.net.preferIPv4Stack", "true");
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"META-INF/spring/dubbo-demo-consumer.xml"});
-        context.start();
-        HelloService demoService = (HelloService) context.getBean("demoService"); // get remote service proxy
+        new SpringApplicationBuilder(Consumer.class).run(args);
+    }
 
-        while (true) {
-            try {
-                demoService.SayHello("world"); // call remote method
-                Future<String> fooFuture = RpcContext.getContext().getFuture();
-                System.out.println(fooFuture.get()); // get result
-                Thread.sleep(6000*10+1000);
-                break;
-            } catch (Throwable throwable) {
-                throwable.printStackTrace();
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        HelloService echoService = (HelloService) applicationContext.getBean("echoService"); // get remote service proxy
+        new Thread(() -> {
+            for (; ; ) {
+                try {
+                    TimeUnit.SECONDS.sleep(10L);
+                    String status1 = echoService.SayHello("Hello world!");
+                    LOGGER.info(">>>>>>>> echo result: " + status1);
+                } catch (Exception e) {
+                    LOGGER.error(">>>>>>>> echo result: " + e.getMessage());
+                }
             }
-
-        }
-
+        }).start();
     }
 }
