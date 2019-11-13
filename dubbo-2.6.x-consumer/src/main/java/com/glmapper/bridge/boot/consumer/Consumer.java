@@ -43,7 +43,7 @@ public class Consumer implements ApplicationContextAware {
         new Thread(() -> {
             for (; ; ) {
                 try {
-                    TimeUnit.SECONDS.sleep(10L);
+                    TimeUnit.SECONDS.sleep(5L);
                     String status1 = echoService.SayHello("Hello world!");
                     LOGGER.info(">>>>>>>> echo result: " + status1);
                 } catch (Exception e) {
