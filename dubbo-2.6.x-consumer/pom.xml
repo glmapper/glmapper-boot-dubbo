@@ -25,13 +25,7 @@
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>
-            <version>3.0.6</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.alipay.sofa</groupId>
-            <artifactId>tracer-core</artifactId>
-            <version>2.4.1-SNAPSHOT</version>
+            <version>3.0.7</version>
         </dependency>
 
         <dependency>

@@ -25,14 +25,14 @@
         <dependency>
             <groupId>com.alipay.sofa</groupId>
             <artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>
-            <version>3.0.6</version>
+            <version>3.0.7</version>
         </dependency>
 
         <!--下面是  2.7.x 版本插件，默认引入  tracer-sofa-boot-starter 时使用的是 2.7.x 版本的插件-->
         <!--<dependency>-->
             <!--<groupId>com.alipay.sofa</groupId>-->
             <!--<artifactId>sofa-tracer-dubbo-plugin</artifactId>-->
-            <!--<version>3.0.6</version>-->
+            <!--<version>3.0.7</version>-->
         <!--</dependency>-->
 
 
@@ -40,13 +40,13 @@
         <!--<dependency>-->
             <!--<groupId>com.alipay.sofa</groupId>-->
             <!--<artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>-->
-            <!--<version>3.0.6</version>-->
+            <!--<version>3.0.7</version>-->
         <!--</dependency>-->
 
         <!--<dependency>-->
             <!--<groupId>com.alipay.sofa</groupId>-->
             <!--<artifactId>tracer-sofa-boot-starter</artifactId>-->
-            <!--<version>3.0.6</version>-->
+            <!--<version>3.0.7</version>-->
             <!--<exclusions>-->
                 <!--<exclusion>-->
                     <!--<groupId>com.alipay.sofa</groupId>-->
