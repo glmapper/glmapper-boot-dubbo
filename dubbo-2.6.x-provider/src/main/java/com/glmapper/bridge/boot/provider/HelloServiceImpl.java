@@ -16,17 +16,11 @@
  */
 package com.glmapper.bridge.boot.provider;
 
-import com.alibaba.dubbo.rpc.RpcContext;
 import com.glmapper.bridge.boot.service.HelloService;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class HelloServiceImpl implements HelloService {
 
     @Override
     public String SayHello(String name) {
-        System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name + ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
-        return "Hello " + name + ", response form provider: " + RpcContext.getContext().getLocalAddress();
+        return "Hello " + name ;
     }
 }
