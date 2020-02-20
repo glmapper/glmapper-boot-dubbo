@@ -47,8 +47,8 @@
 
             <dependency>
                 <groupId>com.alipay.sofa</groupId>
-                <artifactId>sofa-tracer-dubbo-plugin</artifactId>
-                <version>3.0.7</version>
+                <artifactId>sofa-tracer-dubbo-common-plugin</artifactId>
+                <version>3.0.8-SNAPSHOT</version>
             </dependency>
 
             <dependency>
