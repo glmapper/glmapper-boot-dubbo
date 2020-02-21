@@ -19,7 +19,18 @@
 
         <dependency>
             <groupId>com.alipay.sofa</groupId>
-            <artifactId>sofa-tracer-dubbo-common-plugin</artifactId>
+            <artifactId>tracer-sofa-boot-starter</artifactId>
+            <version>3.0.8-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alipay.sofa</groupId>
+                    <artifactId>sofa-tracer-dubbo-2.6.x-plugin</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>com.alipay.sofa</groupId>
+                    <artifactId>sofa-tracer-dubbo-plugin</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
